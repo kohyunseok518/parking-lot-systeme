@@ -1,7 +1,8 @@
 package com.parkinglot.domain.space;
 
-import parkSystem.domain.vehicle.Size;
-import parkSystem.domain.vehicle.Vehicle;
+
+import com.parkinglot.domain.vehicle.Size;
+import com.parkinglot.domain.vehicle.Vehicle;
 
 public class Spot {
     private Size size;

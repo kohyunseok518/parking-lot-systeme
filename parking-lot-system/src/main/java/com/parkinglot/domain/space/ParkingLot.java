@@ -1,8 +1,10 @@
 package com.parkinglot.domain.space;
 
-import parkSystem.domain.ticket.ParkingTicket;
-import parkSystem.domain.vehicle.Vehicle;
-import parkSystem.policy.PricingStrategy;
+
+import com.parkinglot.domain.ticket.ParkingTicket;
+import com.parkinglot.domain.vehicle.Vehicle;
+import com.parkinglot.exception.ParkingLotFullException;
+import com.parkinglot.policy.PricingStrategy;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,8 +31,8 @@ public class ParkingLot {
             }
         }
 
-        System.out.println("만차입니다.");
-        return null;
+        // Domain 클래스에서 시스템 호출로 답변하는 것이 아닌 사용자 정의 예외를 던짐
+        throw new ParkingLotFullException("현재 주차 가능한 자리가 없습니다.");
     }
 
     public void out(ParkingTicket parkingTicket, PricingStrategy pricingStrategy) {

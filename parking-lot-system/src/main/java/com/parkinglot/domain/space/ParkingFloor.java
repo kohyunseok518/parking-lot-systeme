@@ -1,6 +1,5 @@
 package com.parkinglot.domain.space;
-
-import parkSystem.domain.vehicle.Vehicle;
+import com.parkinglot.domain.vehicle.Vehicle;
 
 import java.util.List;
 

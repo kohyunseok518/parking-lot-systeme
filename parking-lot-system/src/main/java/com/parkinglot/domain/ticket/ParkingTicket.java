@@ -1,7 +1,8 @@
 package com.parkinglot.domain.ticket;
 
-import parkSystem.domain.space.Spot;
-import parkSystem.domain.vehicle.Size;
+
+import com.parkinglot.domain.space.Spot;
+import com.parkinglot.domain.vehicle.Size;
 
 import java.time.LocalDateTime;
 

@@ -1,7 +1,6 @@
 package com.parkinglot.policy;
 
-import parkSystem.domain.ticket.ParkingTicket;
-
+import com.parkinglot.domain.ticket.ParkingTicket;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
