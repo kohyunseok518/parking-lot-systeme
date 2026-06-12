@@ -35,9 +35,9 @@ public class ParkingLot {
         throw new ParkingLotFullException("현재 주차 가능한 자리가 없습니다.");
     }
 
-    public void out(ParkingTicket parkingTicket, PricingStrategy pricingStrategy) {
+    public long out(ParkingTicket parkingTicket, PricingStrategy pricingStrategy) {
         LocalDateTime outTime = LocalDateTime.now();
         parkingTicket.getSpot().unParked();
-        System.out.println("주차 요금은 " + pricingStrategy.calculatePrice(parkingTicket, outTime));
+        return pricingStrategy.calculatePrice(parkingTicket, outTime);
     }
 }
