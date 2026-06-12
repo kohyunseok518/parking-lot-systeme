@@ -10,7 +10,7 @@ public class ParkingFloor {
         this.spots = spots;
     }
 
-    public Spot findAvailableSpot(Vehicle vehicle) {
+    public synchronized Spot findAvailableSpot(Vehicle vehicle) {
         // 1. 차체 크기에 해당 하는 주차 자리 먼저 찾기
         for (Spot spot : spots) {
             // 1. 자리 찾기
@@ -23,7 +23,7 @@ public class ParkingFloor {
         return null;
     }
 
-    public Spot findAvailableBiggerSpot(Vehicle vehicle) {
+    public synchronized Spot findAvailableBiggerSpot(Vehicle vehicle) {
         // 1. 차체 크기에 해당 하는 주차 자리 먼저 찾기
         for (Spot spot : spots) {
             // 2. 본인보다 더 큰 자리 찾기
